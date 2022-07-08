@@ -1,0 +1,13 @@
+# Learn more about this file at https://www.gitpod.io/docs/references/gitpod-yml
+additionalRepositories:
+  - url: https://github.com/WebstoneHQ/webstone-education
+    checkoutLocation: webstone-education
+
+checkoutLocation: ./course
+
+workspaceLocation: ./course/.code-workspace
+
+tasks:
+  - before: npm i -g pnpm
+    command: |
+      echo ""
