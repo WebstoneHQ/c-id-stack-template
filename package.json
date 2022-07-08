@@ -1,0 +1,16 @@
+{
+  "name": "@webstone/course-todo",
+  "version": "0.0.1",
+  "description": "TODO - Provide a course description",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webstone",
+    "course"
+  ],
+  "author": "TODO - Author name",
+  "license": "ISC"
+}

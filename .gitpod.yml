@@ -8,6 +8,18 @@ checkoutLocation: ./course
 workspaceLocation: ./course/.code-workspace
 
 tasks:
-  - before: npm i -g pnpm
+  - before: |
+      npm i -g pnpm
+    init: |
+      node ./scripts/symlink-course.js
+      cd ../webstone-education
+      node ./app/scripts/symlink-course.js
+      pnpm install
     command: |
-      echo ""
+      gp sync-done pnpm-install
+      cd ../webstone-education
+      pnpm start
+  - command: |
+      gp sync-await pnpm-install
+      cd ../webstone-education
+      pnpm dev
