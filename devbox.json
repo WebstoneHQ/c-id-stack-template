@@ -1,0 +1,19 @@
+{
+  "packages": [
+    "nodejs@18",
+    "nodePackages_latest.pnpm@latest"
+  ],
+  "shell": {
+    "init_hook": [
+      "source .config/devbox/set-env.sh",
+      "node ./scripts/symlink-course.js",
+      "(cd ../webstone-education && test -d ./node_modules || pnpm install)",
+      "sh .config/devbox/start-student-app.sh"
+    ],
+    "scripts": {
+      "test": [
+        "echo \"Error: no test specified\" && exit 1"
+      ]
+    }
+  }
+}
