@@ -9,10 +9,10 @@
  */
 export default [
 	/* Example of a collapsable header and a nested item */
-	// { text: 'Start Here', header: true, type: 'learn', key: 'startHere' },
-	// { text: 'Getting Started', slug: 'getting-started', key: 'getting-started' },
+	// { text: "Start Here", header: true, type: "learn", key: "startHere" },
+	// { text: "Getting Started", slug: "getting-started", key: "getting-started" },
 
-	{ text: 'Start Here', header: true, key: 'start-here' },
-	{ text: 'What you\'ll learn', slug: '001-introduction/001-what-you-will-learn', key: '001-introduction/001-what-you-will-learn' },
+	{ text: "Start Here", header: true, key: "start-here" },
+	{ text: "What you'll learn", slug: "001-introduction/001-what-you-will-learn", key: "001-introduction/001-what-you-will-learn" },
 
 ] as const;
