@@ -1,0 +1,16 @@
+# Learn more at https://f1bonacc1.github.io/process-compose/
+version: "0.5"
+is_strict: true
+processes:
+  symlink_course:
+    command: node ./scripts/symlink-course.js
+  install_dependencies:
+    command: cd ../webstone-education && test -d ./node_modules || pnpm install && cd -
+    depends_on:
+      symlink_course:
+        condition: process_completed_successfully
+  start_student_app:
+    command: sh .config/devbox/start-student-app.sh
+    depends_on:
+      install_dependencies:
+        condition: process_completed_successfully
